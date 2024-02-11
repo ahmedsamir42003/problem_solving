@@ -1,0 +1,17 @@
+def timeConversion(s):
+    # Write your code here
+    li=s.split(':')
+    if li[-1][-2]=='P':
+        if li[0]=='12':
+            print(str(li[0] + ':' + li[1] + ':' + li[2][:2]))
+        else:
+            li[0]=str(int(li[0])+12)
+            print(str(li[0]+':'+li[1]+':'+li[2][:2]))
+    else:
+        if li[0]=='12':
+            print('00'+':'+li[1]+':'+li[2][0:2])
+        else:
+            print(str(li[0] + ':' + li[1] + ':' + li[2][:2]))
+s = input()
+
+result = timeConversion(s)
