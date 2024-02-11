@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n=int(input())
+queue=[]
+for i in range(n):
+    li=[int(i) for i in input().split()]
+    if li[0]==1:
+        queue.append(li[1])
+    elif li[0]==2:
+        queue.pop(0)
+    else:
+        print(queue[0])
+        
