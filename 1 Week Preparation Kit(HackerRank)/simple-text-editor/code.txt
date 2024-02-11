@@ -1,0 +1,23 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+t=int(input())
+s=''
+sh=[s]
+for i in range(t):
+    li=[i for i in input().split()]
+    if li[0]=='1':
+        s=s+li[1]
+        if s!=sh[-1]:
+            sh.append(s)       
+    elif li[0]=='2':
+        x=len(s)-int(li[1])
+        s=s[:x]
+        if s!=sh[-1]:
+            sh.append(s)    
+    elif li[0]=='3':
+        print(s[int(li[1])-1])
+    elif li[0]=='4':
+        sh.pop()
+        s=sh[-1]
+        
+        
+            

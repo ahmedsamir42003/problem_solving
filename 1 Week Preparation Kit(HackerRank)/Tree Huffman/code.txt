@@ -1,0 +1,39 @@
+
+
+"""class Node:
+    def __init__(self, freq,data):
+        self.freq= freq
+        self.data=data
+        self.left = None
+        self.right = None
+"""        
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def decodeHuff(root, s):
+	#Enter Your Code Here
+    sroot=Node
+    sroot=root
+    out=''
+    z= [
+    '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', 
+    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '<', '=', '>', 
+    '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~',
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 
+    'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
+    'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+    ' ', '\t', '\n', '\r', '\x0b', '\x0c'
+]
+    for i in s:
+        if int(i)==1:
+            sroot=sroot.right
+            if sroot.data in z:
+                out=out+sroot.data
+                sroot=root
+        elif int(i)==0:
+            sroot=sroot.left
+            if sroot.data in z :
+                out=out+sroot.data
+                sroot=root
+    print(out)
+    
